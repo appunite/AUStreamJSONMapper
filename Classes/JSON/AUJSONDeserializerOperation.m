@@ -18,6 +18,7 @@
 
 #pragma mark - Init methods
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init
 {
     self = [super init];
@@ -39,6 +40,7 @@
     return self;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithObjectMapper:(AUObjectMapper *)objectMapper
 {
     self = [self init];
@@ -51,14 +53,16 @@
 #pragma mark - state changes
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)didStart {
+- (void)didStart
+{
     [self willChangeValueForKey:@"isExecuting"];
     _isExecuting = YES;
     [self didChangeValueForKey:@"isExecuting"];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)didFinish {
+- (void)didFinish
+{
     [self willChangeValueForKey:@"isExecuting"];
     [self willChangeValueForKey:@"isFinished"];
     
@@ -73,12 +77,14 @@
 #pragma mark - NSOperation class methods
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (BOOL)isExecuting {
+- (BOOL)isExecuting
+{
     return _isExecuting;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (BOOL)isFinished {
+- (BOOL)isFinished
+{
     return _isFinished;
 }
 
@@ -138,8 +144,10 @@
     }
 }
 
+
 #pragma mark - deserializing JSON methods
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)deserializerJSONWithData:(NSData *)data
 {
     // create stream from NSData object
@@ -149,6 +157,7 @@
     [self deserializerJSONWithStream:stream];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)deserializerJSONWithFileAtPath:(NSString *)filePath
 {
     // create stream with file
@@ -158,6 +167,7 @@
     [self deserializerJSONWithStream:stream];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)deserializerJSONWithStream:(NSInputStream *)stream
 {
     NSAssert(_objectMapper, @"You must define object mapper first.");
@@ -168,8 +178,10 @@
     [_jsonInputStream setDelegate:self];
 }
 
+
 #pragma mark - NSInputStream
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)openStream
 {
     [_jsonInputStream scheduleInRunLoop:[NSRunLoop currentRunLoop]
@@ -179,6 +191,7 @@
     [_jsonInputStream open];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)closeStream
 {
     [_jsonInputStream close];
@@ -187,8 +200,10 @@
     _jsonInputStream = nil;
 }
 
+
 #pragma mark - NSStreamDelegate
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode
 {
     switch(eventCode) {
@@ -221,9 +236,6 @@
                 // check ststaus
                 if (_parserStatus == SBJsonStreamParserError) {
                     NSLog(@"Parser error: %@", _parser.error);
-                    
-                } else if (_parserStatus == SBJsonStreamParserWaitingForData) {
-                    NSLog(@"Parser waiting for more data");
                 }
             }
             break;
@@ -232,23 +244,24 @@
         case NSStreamEventErrorOccurred:
         case NSStreamEventEndEncountered:
         {
-            // move to main queue
-            dispatch_async(dispatch_get_main_queue(), ^ {
-              
-                // send delegate
-                if ([_delegate respondsToSelector:@selector(JSONDeserializerDidCloseStream:)]) {
-                    [_delegate JSONDeserializerDidCloseStream:self];
-                }
-            });
-                           
             // close stream and remove form runloop
             [self closeStream];
             
             // remove parser
             _parser = nil;
             
+            // move to main queue
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                
+                // send delegate
+                if ([_delegate respondsToSelector:@selector(JSONDeserializerDidCloseStream:)]) {
+                    [_delegate JSONDeserializerDidCloseStream:self];
+                }
+            });
+
             // change state
             [self didFinish];
+
             break;
         }
             

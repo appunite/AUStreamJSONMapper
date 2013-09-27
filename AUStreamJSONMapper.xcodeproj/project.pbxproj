@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D3789217F5932200E9919F /* AUJSONDeserializerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788417F5932200E9919F /* AUJSONDeserializerOperation.m */; };
+		20D3789317F5932200E9919F /* AUJSONDeserializerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788417F5932200E9919F /* AUJSONDeserializerOperation.m */; };
+		20D3789417F5932200E9919F /* AUAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788817F5932200E9919F /* AUAttributeMapping.m */; };
+		20D3789517F5932200E9919F /* AUAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788817F5932200E9919F /* AUAttributeMapping.m */; };
+		20D3789617F5932200E9919F /* AUMappingUtls.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788A17F5932200E9919F /* AUMappingUtls.m */; };
+		20D3789717F5932200E9919F /* AUMappingUtls.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788A17F5932200E9919F /* AUMappingUtls.m */; };
+		20D3789817F5932200E9919F /* AUObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788C17F5932200E9919F /* AUObjectMapper.m */; };
+		20D3789917F5932200E9919F /* AUObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788C17F5932200E9919F /* AUObjectMapper.m */; };
+		20D3789A17F5932200E9919F /* AUObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788E17F5932200E9919F /* AUObjectMapping.m */; };
+		20D3789B17F5932200E9919F /* AUObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3788E17F5932200E9919F /* AUObjectMapping.m */; };
+		20D3789C17F5932200E9919F /* AURelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3789017F5932200E9919F /* AURelationshipMapping.m */; };
+		20D3789D17F5932200E9919F /* AURelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D3789017F5932200E9919F /* AURelationshipMapping.m */; };
+		20D378A317F5936500E9919F /* AUEntityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D378A017F5936500E9919F /* AUEntityMapper.m */; };
+		20D378A417F5936500E9919F /* AUEntityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D378A017F5936500E9919F /* AUEntityMapper.m */; };
+		20D378A517F5936500E9919F /* AUEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D378A217F5936500E9919F /* AUEntityMapping.m */; };
+		20D378A617F5936500E9919F /* AUEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D378A217F5936500E9919F /* AUEntityMapping.m */; };
 		20DE873417F57CA6000113D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DE873317F57CA6000113D0 /* Foundation.framework */; };
 		20DE873917F57CA6000113D0 /* AUStreamJSONMapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20DE873817F57CA6000113D0 /* AUStreamJSONMapper.h */; };
 		20DE873B17F57CA6000113D0 /* AUStreamJSONMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE873A17F57CA6000113D0 /* AUStreamJSONMapper.m */; };
@@ -17,22 +33,6 @@
 		20DE874E17F57CA6000113D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20DE874C17F57CA6000113D0 /* InfoPlist.strings */; };
 		20DE875017F57CA6000113D0 /* AUStreamJSONMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE874F17F57CA6000113D0 /* AUStreamJSONMapperTests.m */; };
 		20DE877B17F57F21000113D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DE877A17F57F21000113D0 /* CoreData.framework */; };
-		20DE878F17F58186000113D0 /* AUAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE877F17F58186000113D0 /* AUAttributeMapping.m */; };
-		20DE879017F58186000113D0 /* AUAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE877F17F58186000113D0 /* AUAttributeMapping.m */; };
-		20DE879117F58186000113D0 /* AUJSONDeserializerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878117F58186000113D0 /* AUJSONDeserializerOperation.m */; };
-		20DE879217F58186000113D0 /* AUJSONDeserializerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878117F58186000113D0 /* AUJSONDeserializerOperation.m */; };
-		20DE879317F58186000113D0 /* AUMappingUtls.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878317F58186000113D0 /* AUMappingUtls.m */; };
-		20DE879417F58186000113D0 /* AUMappingUtls.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878317F58186000113D0 /* AUMappingUtls.m */; };
-		20DE879517F58186000113D0 /* AUObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878517F58186000113D0 /* AUObjectMapper.m */; };
-		20DE879617F58186000113D0 /* AUObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878517F58186000113D0 /* AUObjectMapper.m */; };
-		20DE879717F58186000113D0 /* AUObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878717F58186000113D0 /* AUObjectMapping.m */; };
-		20DE879817F58186000113D0 /* AUObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878717F58186000113D0 /* AUObjectMapping.m */; };
-		20DE879917F58186000113D0 /* AURelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878917F58186000113D0 /* AURelationshipMapping.m */; };
-		20DE879A17F58186000113D0 /* AURelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878917F58186000113D0 /* AURelationshipMapping.m */; };
-		20DE879B17F58186000113D0 /* AUEntityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878C17F58186000113D0 /* AUEntityMapper.m */; };
-		20DE879C17F58186000113D0 /* AUEntityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878C17F58186000113D0 /* AUEntityMapper.m */; };
-		20DE879D17F58186000113D0 /* AUEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878E17F58186000113D0 /* AUEntityMapping.m */; };
-		20DE879E17F58186000113D0 /* AUEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DE878E17F58186000113D0 /* AUEntityMapping.m */; };
 		F20664A564E046E7A3CB7BEE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D6F42FB6E84FF7857C329A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		20D3788117F5932200E9919F /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		20D3788317F5932200E9919F /* AUJSONDeserializerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUJSONDeserializerOperation.h; sourceTree = "<group>"; };
+		20D3788417F5932200E9919F /* AUJSONDeserializerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUJSONDeserializerOperation.m; sourceTree = "<group>"; };
+		20D3788517F5932200E9919F /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		20D3788717F5932200E9919F /* AUAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUAttributeMapping.h; sourceTree = "<group>"; };
+		20D3788817F5932200E9919F /* AUAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUAttributeMapping.m; sourceTree = "<group>"; };
+		20D3788917F5932200E9919F /* AUMappingUtls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUMappingUtls.h; sourceTree = "<group>"; };
+		20D3788A17F5932200E9919F /* AUMappingUtls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUMappingUtls.m; sourceTree = "<group>"; };
+		20D3788B17F5932200E9919F /* AUObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUObjectMapper.h; sourceTree = "<group>"; };
+		20D3788C17F5932200E9919F /* AUObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUObjectMapper.m; sourceTree = "<group>"; };
+		20D3788D17F5932200E9919F /* AUObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUObjectMapping.h; sourceTree = "<group>"; };
+		20D3788E17F5932200E9919F /* AUObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUObjectMapping.m; sourceTree = "<group>"; };
+		20D3788F17F5932200E9919F /* AURelationshipMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURelationshipMapping.h; sourceTree = "<group>"; };
+		20D3789017F5932200E9919F /* AURelationshipMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AURelationshipMapping.m; sourceTree = "<group>"; };
+		20D3789117F5932200E9919F /* ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMapping.h; sourceTree = "<group>"; };
+		20D3789F17F5936500E9919F /* AUEntityMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUEntityMapper.h; sourceTree = "<group>"; };
+		20D378A017F5936500E9919F /* AUEntityMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUEntityMapper.m; sourceTree = "<group>"; };
+		20D378A117F5936500E9919F /* AUEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUEntityMapping.h; sourceTree = "<group>"; };
+		20D378A217F5936500E9919F /* AUEntityMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUEntityMapping.m; sourceTree = "<group>"; };
 		20DE873017F57CA6000113D0 /* libAUStreamJSONMapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAUStreamJSONMapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE873317F57CA6000113D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20DE873717F57CA6000113D0 /* AUStreamJSONMapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AUStreamJSONMapper-Prefix.pch"; sourceTree = "<group>"; };
@@ -72,22 +91,6 @@
 		20DE874D17F57CA6000113D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20DE874F17F57CA6000113D0 /* AUStreamJSONMapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUStreamJSONMapperTests.m; sourceTree = "<group>"; };
 		20DE877A17F57F21000113D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		20DE877E17F58186000113D0 /* AUAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUAttributeMapping.h; sourceTree = "<group>"; };
-		20DE877F17F58186000113D0 /* AUAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUAttributeMapping.m; sourceTree = "<group>"; };
-		20DE878017F58186000113D0 /* AUJSONDeserializerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUJSONDeserializerOperation.h; sourceTree = "<group>"; };
-		20DE878117F58186000113D0 /* AUJSONDeserializerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUJSONDeserializerOperation.m; sourceTree = "<group>"; };
-		20DE878217F58186000113D0 /* AUMappingUtls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUMappingUtls.h; sourceTree = "<group>"; };
-		20DE878317F58186000113D0 /* AUMappingUtls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUMappingUtls.m; sourceTree = "<group>"; };
-		20DE878417F58186000113D0 /* AUObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUObjectMapper.h; sourceTree = "<group>"; };
-		20DE878517F58186000113D0 /* AUObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUObjectMapper.m; sourceTree = "<group>"; };
-		20DE878617F58186000113D0 /* AUObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUObjectMapping.h; sourceTree = "<group>"; };
-		20DE878717F58186000113D0 /* AUObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUObjectMapping.m; sourceTree = "<group>"; };
-		20DE878817F58186000113D0 /* AURelationshipMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURelationshipMapping.h; sourceTree = "<group>"; };
-		20DE878917F58186000113D0 /* AURelationshipMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AURelationshipMapping.m; sourceTree = "<group>"; };
-		20DE878B17F58186000113D0 /* AUEntityMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUEntityMapper.h; sourceTree = "<group>"; };
-		20DE878C17F58186000113D0 /* AUEntityMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUEntityMapper.m; sourceTree = "<group>"; };
-		20DE878D17F58186000113D0 /* AUEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUEntityMapping.h; sourceTree = "<group>"; };
-		20DE878E17F58186000113D0 /* AUEntityMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUEntityMapping.m; sourceTree = "<group>"; };
 		690AE9A3D9C04D4ABC39EAEC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F4D6F42FB6E84FF7857C329A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +120,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D3788017F5932200E9919F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20D3789E17F5936500E9919F /* CoreData */,
+				20D3788117F5932200E9919F /* CoreData.h */,
+				20D3788217F5932200E9919F /* JSON */,
+				20D3788517F5932200E9919F /* JSON.h */,
+				20D3788617F5932200E9919F /* ObjectMapping */,
+				20D3789117F5932200E9919F /* ObjectMapping.h */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		20D3788217F5932200E9919F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				20D3788317F5932200E9919F /* AUJSONDeserializerOperation.h */,
+				20D3788417F5932200E9919F /* AUJSONDeserializerOperation.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		20D3788617F5932200E9919F /* ObjectMapping */ = {
+			isa = PBXGroup;
+			children = (
+				20D3788717F5932200E9919F /* AUAttributeMapping.h */,
+				20D3788817F5932200E9919F /* AUAttributeMapping.m */,
+				20D3788917F5932200E9919F /* AUMappingUtls.h */,
+				20D3788A17F5932200E9919F /* AUMappingUtls.m */,
+				20D3788B17F5932200E9919F /* AUObjectMapper.h */,
+				20D3788C17F5932200E9919F /* AUObjectMapper.m */,
+				20D3788D17F5932200E9919F /* AUObjectMapping.h */,
+				20D3788E17F5932200E9919F /* AUObjectMapping.m */,
+				20D3788F17F5932200E9919F /* AURelationshipMapping.h */,
+				20D3789017F5932200E9919F /* AURelationshipMapping.m */,
+			);
+			path = ObjectMapping;
+			sourceTree = "<group>";
+		};
+		20D3789E17F5936500E9919F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				20D3789F17F5936500E9919F /* AUEntityMapper.h */,
+				20D378A017F5936500E9919F /* AUEntityMapper.m */,
+				20D378A117F5936500E9919F /* AUEntityMapping.h */,
+				20D378A217F5936500E9919F /* AUEntityMapping.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		20DE872717F57CA6000113D0 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +207,7 @@
 			children = (
 				20DE873817F57CA6000113D0 /* AUStreamJSONMapper.h */,
 				20DE873A17F57CA6000113D0 /* AUStreamJSONMapper.m */,
-				20DE877C17F58186000113D0 /* Classes */,
+				20D3788017F5932200E9919F /* Classes */,
 				20DE873617F57CA6000113D0 /* Supporting Files */,
 			);
 			path = AUStreamJSONMapper;
@@ -184,45 +237,6 @@
 				20DE874C17F57CA6000113D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		20DE877C17F58186000113D0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				20DE877D17F58186000113D0 /* Core */,
-				20DE878A17F58186000113D0 /* CoreData */,
-			);
-			path = Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		20DE877D17F58186000113D0 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				20DE877E17F58186000113D0 /* AUAttributeMapping.h */,
-				20DE877F17F58186000113D0 /* AUAttributeMapping.m */,
-				20DE878017F58186000113D0 /* AUJSONDeserializerOperation.h */,
-				20DE878117F58186000113D0 /* AUJSONDeserializerOperation.m */,
-				20DE878217F58186000113D0 /* AUMappingUtls.h */,
-				20DE878317F58186000113D0 /* AUMappingUtls.m */,
-				20DE878417F58186000113D0 /* AUObjectMapper.h */,
-				20DE878517F58186000113D0 /* AUObjectMapper.m */,
-				20DE878617F58186000113D0 /* AUObjectMapping.h */,
-				20DE878717F58186000113D0 /* AUObjectMapping.m */,
-				20DE878817F58186000113D0 /* AURelationshipMapping.h */,
-				20DE878917F58186000113D0 /* AURelationshipMapping.m */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		20DE878A17F58186000113D0 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				20DE878B17F58186000113D0 /* AUEntityMapper.h */,
-				20DE878C17F58186000113D0 /* AUEntityMapper.m */,
-				20DE878D17F58186000113D0 /* AUEntityMapping.h */,
-				20DE878E17F58186000113D0 /* AUEntityMapping.m */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,15 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DE879317F58186000113D0 /* AUMappingUtls.m in Sources */,
-				20DE879117F58186000113D0 /* AUJSONDeserializerOperation.m in Sources */,
+				20D3789617F5932200E9919F /* AUMappingUtls.m in Sources */,
+				20D3789217F5932200E9919F /* AUJSONDeserializerOperation.m in Sources */,
 				20DE873B17F57CA6000113D0 /* AUStreamJSONMapper.m in Sources */,
-				20DE879B17F58186000113D0 /* AUEntityMapper.m in Sources */,
-				20DE878F17F58186000113D0 /* AUAttributeMapping.m in Sources */,
-				20DE879517F58186000113D0 /* AUObjectMapper.m in Sources */,
-				20DE879D17F58186000113D0 /* AUEntityMapping.m in Sources */,
-				20DE879717F58186000113D0 /* AUObjectMapping.m in Sources */,
-				20DE879917F58186000113D0 /* AURelationshipMapping.m in Sources */,
+				20D378A317F5936500E9919F /* AUEntityMapper.m in Sources */,
+				20D3789417F5932200E9919F /* AUAttributeMapping.m in Sources */,
+				20D3789817F5932200E9919F /* AUObjectMapper.m in Sources */,
+				20D378A517F5936500E9919F /* AUEntityMapping.m in Sources */,
+				20D3789A17F5932200E9919F /* AUObjectMapping.m in Sources */,
+				20D3789C17F5932200E9919F /* AURelationshipMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,15 +371,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DE879417F58186000113D0 /* AUMappingUtls.m in Sources */,
-				20DE879217F58186000113D0 /* AUJSONDeserializerOperation.m in Sources */,
+				20D3789717F5932200E9919F /* AUMappingUtls.m in Sources */,
+				20D3789317F5932200E9919F /* AUJSONDeserializerOperation.m in Sources */,
 				20DE875017F57CA6000113D0 /* AUStreamJSONMapperTests.m in Sources */,
-				20DE879C17F58186000113D0 /* AUEntityMapper.m in Sources */,
-				20DE879017F58186000113D0 /* AUAttributeMapping.m in Sources */,
-				20DE879617F58186000113D0 /* AUObjectMapper.m in Sources */,
-				20DE879E17F58186000113D0 /* AUEntityMapping.m in Sources */,
-				20DE879817F58186000113D0 /* AUObjectMapping.m in Sources */,
-				20DE879A17F58186000113D0 /* AURelationshipMapping.m in Sources */,
+				20D378A417F5936500E9919F /* AUEntityMapper.m in Sources */,
+				20D3789517F5932200E9919F /* AUAttributeMapping.m in Sources */,
+				20D3789917F5932200E9919F /* AUObjectMapper.m in Sources */,
+				20D378A617F5936500E9919F /* AUEntityMapping.m in Sources */,
+				20D3789B17F5932200E9919F /* AUObjectMapping.m in Sources */,
+				20D3789D17F5932200E9919F /* AURelationshipMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

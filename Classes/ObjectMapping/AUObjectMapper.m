@@ -38,7 +38,7 @@
 #pragma mark - Private class methods
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)objectForMapping:(AUObjectMapping *)mapping
+- (id)destinationObjectForSourceObject:(id)object mapping:(AUObjectMapping *)mapping
 {
     return [mapping object];
 }
@@ -47,7 +47,7 @@
 - (id)mapObject:(id)object withMapping:(AUObjectMapping *)mapping belongsTo:(id)belongsTo
 {
     // create new mapped object
-    NSObject* mappedObject = [self objectForMapping:mapping];
+    NSObject* mappedObject = [self destinationObjectForSourceObject:object mapping:mapping];
 
     // send delagate
     if ([_delegate respondsToSelector:@selector(mapper:willMapObject:withMappings:)]) {
@@ -73,7 +73,8 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttributesObject:(id)sourceObject toObject:(id)destinationObject withAttributeMapping:(AUAttributeMapping *)attributeMapping {
+- (void)mapAttributesObject:(id)sourceObject toObject:(id)destinationObject withAttributeMapping:(AUAttributeMapping *)attributeMapping
+{
 
     // get key and value for mapped object
     id key = attributeMapping.destinationKeyPath;
@@ -93,7 +94,8 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapRelationshipObject:(id)sourceObject toObject:(id)destinationObject withRelationshipMapping:(AURelationshipMapping *)relationshipMappings {
+- (void)mapRelationshipObject:(id)sourceObject toObject:(id)destinationObject withRelationshipMapping:(AURelationshipMapping *)relationshipMappings
+{
     // get key and value for mapped object
 //    id key = relationshipMappings.destinationKeyPath;
     id value = [sourceObject objectForKey:relationshipMappings.sourceKeyPath];

@@ -10,38 +10,52 @@
 
 @implementation AUEntityMapping
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithClass:(Class)objectClass
 {
     NSAssert(YES, @"You can not invoke `initWithClass:` selector, use `initWithEntity:`");
     return nil;
 }
 
-- (id)initWithEntity:(NSEntityDescription *)entity
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithEntityForName:(NSString *)entityName
 {
     self = [super init];
     if (self) {
-        NSParameterAssert(entity);
-        _entityDescription = entity;
+        NSParameterAssert(entityName);
+        _entityName = [entityName copy];
     }
     return self;
 }
 
-+ (instancetype)mappingForEntity:(NSEntityDescription *)entity
+////////////////////////////////////////////////////////////////////////////////////////////////////
++ (instancetype)mappingForEntityForName:(NSString *)entityName
 {
-    return [[self alloc] initWithEntity:entity];
+    return [[self alloc] initWithEntityForName:entityName];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)object
 {
     NSAssert(YES, @"You can not invoke `object` selector, use `objectWithManagedObjectContext:`");
     return nil;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)objectWithManagedObjectContext:(NSManagedObjectContext *)context
 {
     NSParameterAssert(context);
-    return [NSEntityDescription insertNewObjectForEntityForName:[_entityDescription managedObjectClassName]
+    return [NSEntityDescription insertNewObjectForEntityForName:_entityName
                                          inManagedObjectContext:context];
+}
+
+
+#pragma mark - Others
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %p managedObjectClass => %@>", self.class, self, _entityName];
 }
 
 @end

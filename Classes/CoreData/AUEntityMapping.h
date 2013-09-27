@@ -11,9 +11,10 @@
 
 @interface AUEntityMapping : AUObjectMapping
 
-- (id)initWithEntity:(NSEntityDescription *)entityName;
-+ (instancetype)mappingForEntity:(NSEntityDescription *)entity;
+- (id)initWithEntityForName:(NSString *)entityName;
++ (instancetype)mappingForEntityForName:(NSString *)entityName;
 
-@property (nonatomic, strong, readonly) NSEntityDescription* entityDescription;
-- (id)objectWithManagedObjectContext:(NSManagedObjectContext *)conetext;
+@property (nonatomic, copy, readonly) NSString* entityName;
+
+- (id)objectWithManagedObjectContext:(NSManagedObjectContext *)context;
 @end

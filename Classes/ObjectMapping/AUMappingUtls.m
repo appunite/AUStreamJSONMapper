@@ -8,6 +8,7 @@
 
 #import "AUMappingUtls.h"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL AUClassIsCollection(Class aClass)
 {
     return (aClass && ([aClass isSubclassOfClass:[NSSet class]] ||
@@ -15,6 +16,8 @@ BOOL AUClassIsCollection(Class aClass)
                        [aClass isSubclassOfClass:[NSOrderedSet class]]));
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL AUObjectIsCollection(id object)
 {
     return AUClassIsCollection([object class]);

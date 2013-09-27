@@ -16,14 +16,18 @@
     NSMutableSet *_mutableMappings;
 }
 
+
 #pragma mark - Inits
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 + (instancetype)mappingForClass:(Class)objectClass
 {
     return [[AUObjectMapping alloc] initWithClass:objectClass];
 }
 
-- (id)init {
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)init
+{
     self = [super init];
     if (self) {
         _mutableMappings = [NSMutableSet new];
@@ -31,7 +35,9 @@
     return self;
 }
 
-- (id)initWithClass:(Class)objectClass {
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithClass:(Class)objectClass
+{
     self = [self init];
     if (self) {
         _objectClass = objectClass;
@@ -39,6 +45,7 @@
     return self;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)object
 {
     return [[[self objectClass] alloc] init];
@@ -47,6 +54,7 @@
 
 #pragma mark - Adding/Removing mappings
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)addMapping:(AUAttributeMapping *)mappings
 {
     // update object mapings
@@ -55,6 +63,7 @@
     [_mutableMappings addObject:mappings];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)addMappingsFromDictionary:(NSDictionary *)mappings
 {
     [mappings enumerateKeysAndObjectsUsingBlock:^(NSString *sourceKeyPath, NSString *destinationKeyPath, BOOL *stop) {
@@ -63,11 +72,13 @@
     }];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)addMappingsFromArray:(NSArray *)mappings
 {
     [self addMappingsFromDictionary:[NSDictionary dictionaryWithObjects:mappings forKeys:mappings]];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)removeMapping:(AUAttributeMapping *)mapping
 {
     [_mutableMappings removeObject:mapping];
@@ -76,11 +87,13 @@
 
 #pragma mark - Getters
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSSet *)propertyMappings
 {
     return [NSSet setWithSet:_mutableMappings];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSSet *)attributeMappings
 {
     NSMutableSet *set = [NSMutableSet new];
@@ -92,6 +105,7 @@
     return [NSSet setWithSet:set];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSSet *)relationshipMappings {
     NSMutableSet *set = [NSMutableSet new];
     [_mutableMappings enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
@@ -102,8 +116,10 @@
     return [NSSet setWithSet:set];
 }
 
+
 #pragma mark - Others
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@: %p objectClass => %@>", self.class, self, self.objectClass];

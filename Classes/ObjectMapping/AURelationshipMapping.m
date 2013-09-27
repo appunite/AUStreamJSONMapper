@@ -14,6 +14,7 @@
 
 @implementation AURelationshipMapping
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 + (instancetype)relationshipMappingFromKeyPath:(NSString *)sourceKeyPath
                                      toKeyPath:(NSString *)destinationKeyPath
                                    withMapping:(AUObjectMapping *)mapping
@@ -24,6 +25,7 @@
     return relationshipMapping;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@: %p %@ => %@>", self.class, self, self.sourceKeyPath, self.destinationKeyPath];

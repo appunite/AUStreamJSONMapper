@@ -17,6 +17,7 @@
 @implementation AUAttributeMapping
 @synthesize objectMapping;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 + (instancetype)attributeMappingFromKeyPath:(NSString *)sourceKeyPath toKeyPath:(NSString *)destinationKeyPath
 {
 
@@ -32,6 +33,7 @@
     return attributeMapping;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@: %p %@ => %@>", self.class, self, self.sourceKeyPath, self.destinationKeyPath];

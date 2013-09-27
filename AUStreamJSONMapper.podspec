@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Deserialize JSON objects using streaming parser"
   s.homepage     = "https://github.com/appunite/AUStreamJSONMapper"
   s.author       = { "emil.wojtaszek" => "emil.wojtaszek@gmail.com" }
-  s.source       = { :git => "https://github.com/appunite/AUStreamJSONMapper", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/appunite/AUStreamJSONMapper.git", :tag => "0.0.1" }
   s.license      = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
 
   # Platform setup
@@ -13,27 +13,17 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
   
-  # Exclude optional Search and Testing modules
-  s.default_subspec = 'Core'
+  s.source_files   = 'Classes/JSON.h', 'Classes/JSON/*.{h,m}', 'Classes/ObjectMapping.h', 'Classes/ObjectMapping/*.{h,m}'
+  s.dependency       'SBJson'
+  s.dependency       'RKValueTransformers', '~> 1.0.0'
+  s.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.5.0'
 
   ### Subspecs
-  
-  s.subspec 'Core' do |cs|    
-    cs.dependency       'SBJson'
-    cs.dependency       'AUStreamJSONMapper/ObjectMapping'
-    cs.dependency       'AUStreamJSONMapper/CoreData'
-    cs.dependency       'RKValueTransformers', '~> 1.0.0'
-    cs.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.5.0'
-  end
-  
-  s.subspec 'ObjectMapping' do |os|
-    os.source_files   = 'Classes/Core'
-    os.dependency       'RKValueTransformers', '~> 1.0.0'
-    os.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.5.0'
-  end
-  
+      
   s.subspec 'CoreData' do |cdos|
-    cdos.source_files = 'Classes/CodeData'
+    cdos.source_files = 'Classes/CoreData.h', 'Classes/CoreData/*.{h,m}'
     cdos.frameworks   = 'CoreData'
+    cdos.dependency     'RKValueTransformers', '~> 1.0.0'
+    cdos.dependency     'ISO8601DateFormatterValueTransformer', '~> 0.5.0'
   end
 end
